@@ -77,12 +77,12 @@ m gives the slope of line ax + by = c
 -----------------------------------------------------------------------------------------------------------
 
 
-const int LINE = 1;
-const int RAY = 2;
-const int LINESEGMENT = 3;
-const int EMPTY = 4;
-const int UP = 11;
-const int DOWN = 12;
+	const int LINE = 1;
+	const int RAY = 2;
+	const int LINESEGMENT = 3;
+	const int EMPTY = 4;
+	const int UP = 11;
+	const int DOWN = 12;
 
 
 	struct Projection
