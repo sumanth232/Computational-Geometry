@@ -70,7 +70,7 @@ a point on a plane is represented by its x and y co-ordinates
 	
 	};
 
-A Half plane is represented by its inequality 'ax + by <= c'
+A Half plane is represented by its inequality 'ax + by <= c' <br>
 m gives the slope of line ax + by = c
 
 
@@ -121,15 +121,15 @@ formed from ith inequality.
 Projection can be an entire LINE <br>
 Initially, a Projection object is initiated to a LINE and is then projected onto half planes 0 to i-1
 
-Projection can be an EMPTY (NULLSET)
+Projection can be an EMPTY (NULLSET) <br>
 Incase the intersection is empty if the feasible region itself is null
 
-Projection can be an RAY
+Projection can be an RAY <br>
 To represent a ray we have the starting point as p. 
 The direction of ray whether upwards of downwards is represented by dir field. 
 proj.dir = UP or DOWN
 
-Projection can be an LINESEGMENT
+Projection can be an LINESEGMENT <br>
 Line segment is represented by two of its extreme points p and q.
 here p should be below q, i.e. y-coordinate of p should be less than y-coordinate of q
 
