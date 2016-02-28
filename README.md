@@ -26,21 +26,21 @@ The main datastructure we are using are Point, Halfplane, Projection,  which is 
 
 ---------------------------------------------------------------------------------------------------------
 
-struct Point
-{
-	double x, y;
-
-	Point() {}
-	Point(double _x, double _y) : x(_x), y(_y) {}
-
-	friend ostream& operator<<( ostream& output, const Point& p )
+	struct Point
 	{
-		char temp[500];
-		sprintf(temp,"(%0.2lf,%0.2lf)",p.x,p.y);
-		output << temp;
-		return output;
-	}   
-};
+		double x, y;
+
+		Point() {}
+		Point(double _x, double _y) : x(_x), y(_y) {}
+
+		friend ostream& operator<<( ostream& output, const Point& p )
+		{
+			char temp[500];
+			sprintf(temp,"(%0.2lf,%0.2lf)",p.x,p.y);
+			output << temp;
+			return output;
+		}   
+	};
 
 a point on a plane is represented by its x and y co-ordinates
 
