@@ -111,14 +111,14 @@ m gives the slope of line ax + by = c
 	};
 
 
-In the above data structures, a,b,c represent the equation of line in the inequality 'ax + by <= c'
+In the above data structures, a,b,c represent the equation of line in the inequality 'ax + by <= c' <br>
 m represents the slope of line
 
 
 We observe there can be four possibilities in Intersection of Projection of all half planes from 0 to i-1 on the line
 formed from ith inequality.
 
-Projection can be an entire LINE
+Projection can be an entire LINE <br>
 Initially, a Projection object is initiated to a LINE and is then projected onto half planes 0 to i-1
 
 Projection can be an EMPTY (NULLSET)
