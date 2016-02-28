@@ -47,28 +47,28 @@ a point on a plane is represented by its x and y co-ordinates
 -----------------------------------------------------------------------------------------------------------
 
 
-struct Halfplane
-{
-	// Half palne is represented by inequality
-	//			ax + by <= c
-	double a,b,c;
-	double m;	// slope
-
-	Halfplane(double _a, double _b, double _c) : a(_a), b(_b), c(_c) {
-		if (_b != 0) {
-			m = -a/b;
-		}
-	}
-
-	friend std::ostream& operator<<(std::ostream& os, const Halfplane& obj)
+	struct Halfplane
 	{
-	   char temp[100];
-	   sprintf(temp,"%0.2lfx + %0.2lfy <= %0.2lf",obj.a,obj.b,obj.c);
-	   os << temp;
-	   return os;
-	}
-
-};
+		// Half palne is represented by inequality
+		//			ax + by <= c
+		double a,b,c;
+		double m;	// slope
+	
+		Halfplane(double _a, double _b, double _c) : a(_a), b(_b), c(_c) {
+			if (_b != 0) {
+				m = -a/b;
+			}
+		}
+	
+		friend std::ostream& operator<<(std::ostream& os, const Halfplane& obj)
+		{
+	   	char temp[100];
+	   	sprintf(temp,"%0.2lfx + %0.2lfy <= %0.2lf",obj.a,obj.b,obj.c);
+	   	os << temp;
+	   	return os;
+		}
+	
+	};
 
 A Half plane is represented by its inequality 'ax + by <= c'
 m gives the slope of line ax + by = c
@@ -85,30 +85,30 @@ const int UP = 11;
 const int DOWN = 12;
 
 
-struct Projection
-{
-	Point p,q;	// q should not be accessed if it is a RAY
-				// p  should be below q if it is a LINESEGMENT
-	double a,b,c;	// ax + by <= c
-	double m;	// slope
-	int type;	// type can be LINE, RAY, LINESEGMENT, EMPTY
-	int dir;	// direction if the projection is a ray
-
-	void setabc(Projection proj) {
-		a = proj.a;
-		b = proj.b;
-		c = proj.c;
-	}
-
-	friend std::ostream& operator<<(std::ostream& os, const Projection& obj)
+	struct Projection
 	{
-	   char temp[100];
-	   sprintf(temp,"%0.2lfx + %0.2lfy <= %0.2lf",obj.a,obj.b,obj.c);
-	   os << temp;
-	   return os;
-	}
-
-};
+		Point p,q;	// q should not be accessed if it is a RAY
+					// p  should be below q if it is a LINESEGMENT
+		double a,b,c;	// ax + by <= c
+		double m;	// slope
+		int type;	// type can be LINE, RAY, LINESEGMENT, EMPTY
+		int dir;	// direction if the projection is a ray
+	
+		void setabc(Projection proj) {
+			a = proj.a;
+			b = proj.b;
+			c = proj.c;
+		}
+	
+		friend std::ostream& operator<<(std::ostream& os, const Projection& obj)
+		{
+	   	char temp[100];
+	   	sprintf(temp,"%0.2lfx + %0.2lfy <= %0.2lf",obj.a,obj.b,obj.c);
+	   	os << temp;
+	   	return os;
+		}
+	
+	};
 
 
 In the above data structures, a,b,c represent the equation of line in the inequality 'ax + by <= c'
